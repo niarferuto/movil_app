@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>
+        </title>
+        <link rel="stylesheet" href="style/jquery.mobile-1.3.0.css" />
+        <link rel="stylesheet" href="style/jquery.Jcrop.min.css" />
+        <link rel="stylesheet" href="style/my.css" />
+        
+        <script src="js/jquery-1.9.0.min.js">
+        </script>
+        <script src="js/jquery.mobile-1.3.0.min.js">
+        </script>
+        <script src="js/jquery.Jcrop.min.js">
+        </script>
+        <script type="text/javascript" src="js/cordova-2.1.0.js"></script>
+        <script src="js/my.js">
+        </script>
+    </head>
+    
+    <body>
+        <!-- Index -->
+        <div id="page1" data-role="page">
+            <div data-role="header" data-theme="a">
+                <h3>
+                    NiarfeApp
+                </h3>
+            </div>
+            <div data-role="content">
+                <a id="button5" href="#page2" data-role="button">
+                    Log In
+                </a>
+                <a id="button6" href="#page3" data-role="button">
+                    Registro
+                </a>
+            </div>
+        </div>
+        <!-- Login -->
+        <div id="page2" data-role="page">
+            <div id="pageheader2" data-role="header" data-theme="a">
+                <a id="button3" class="ui-btn-left" href="#page1" data-role="button" data-iconpos="left"
+                data-icon="arrow-l">
+                    Atras
+                </a>
+                <h3 id="heading2">
+                    Log in
+                </h3>
+            </div>
+            <div data-role="content">
+                <form id="form_login" method="POST" action="#" data-ajax="false">
+                    <div data-role="fieldcontain">
+                        <fieldset data-role="controlgroup">
+                            <label for="user">
+                                Usuario
+                            </label>
+                            <input id="user" name="user" value="" type="text" placeholder="">
+                        </fieldset>
+                    </div>
+                    <div data-role="fieldcontain">
+                        <fieldset data-role="controlgroup">
+                            <label for="pass">
+                                Contrase�a
+                            </label>
+                            <input id="pass" name="pass" value="" type="password" placeholder="">
+                        </fieldset>
+                    </div>
+                    <input id="submitbutton1" value="Log In" type="submit">
+                </form>
+            </div>
+        </div>
+        <!-- Registro -->
+        <div id="page3" data-role="page">
+            <div id="pageheader3" data-role="header" data-theme="a">
+                <a id="button4" class="ui-btn-left" href="#page1" data-role="button" data-iconpos="left"
+                data-icon="arrow-l">
+                    Atras
+                </a>
+                <h3 id="heading3">
+                    Registro
+                </h3>
+            </div>
+            <div data-role="content">
+                <form id="form_regis" method="POST" action="#" data-ajax="false">
+                    <div data-role="fieldcontain">
+                        <fieldset data-role="controlgroup">
+                            <label for="user">
+                                Usuario
+                            </label>
+                            <input id="user" name="user" value="" type="text" placeholder="">
+                        </fieldset>
+                    </div>
+                    <div data-role="fieldcontain">
+                        <fieldset data-role="controlgroup">
+                            <label for="pass">
+                                Contrase�a
+                            </label>
+                            <input id="pass" name="pass" value="" type="password" placeholder="">
+                        </fieldset>
+                    </div>
+                    <div data-role="fieldcontain">
+                        <fieldset data-role="controlgroup">
+                            <label for="nombres">
+                                Nombres
+                            </label>
+                            <input id="nombres" name="nombres" value="" type="text" placeholder="">
+                        </fieldset>
+                    </div>
+                    <div data-role="fieldcontain">
+                        <fieldset data-role="controlgroup">
+                            <label for="apellidos">
+                                Apellidos
+                            </label>
+                            <input id="apellidos" name="apellidos" value="" type="text" placeholder="">
+                        </fieldset>
+                    </div>
+                    <input id="submitbutton3" value="Registrar" type="submit">
+                </form>
+            </div>
+        </div>
+        <!-- User -->
+        <div id="page4" data-role="page">
+            <div id="pageheader4" data-role="header" data-theme="a">
+                <h3 id="heading4">
+                    User
+                </h3>
+                <a id="logout" class="ui-btn-right" href="#" data-role="button">
+                    Cerrar Sesion
+                </a>
+            </div>
+            <div data-role="content">
+                <div id="text1">
+                    <p>
+                        <b>
+                            Usuario
+                        </b>
+                    </p>
+                </div>
+                <div id="user_name">
+                    <p>
+                        <b>
+                        </b>
+                        &nbsp;
+                    </p>
+                </div>
+                <div id="text3">
+                    <p>
+                        <b>
+                            Nombre
+                        </b>
+                    </p>
+                </div>
+                <div id="nombre">
+                    <p>
+                        <b>
+                        </b>
+                        &nbsp;
+                    </p>
+                </div>
+                <a id="get_pic" href="#page4" data-role="button">
+                    Tomar foto
+                </a>
+                <a id="button9" href="#page6" data-role="button">
+                    Prueba
+                </a>
+            </div>
+        </div>
+        <!-- Imagen -->
+        <div id="page5" data-role="page">
+            <div data-role="content">
+            	<div class="container">
+            		<img id="target" alt="image" src="">
+            	</div>
+            	<img id="target2" alt="image" src="" style="display:none;">
+            	<canvas id="preview-pic" style="display:none;"></canvas>
+            </div>
+            <div id="pagefooter2" data-role="footer" data-theme="a" data-position="fixed">
+                <div data-role="navbar" data-iconpos="top">
+                    <ul>
+                        <li>
+                            <a href="#" data-theme="" data-icon="check" id="confirm-pic">
+                                Confirmar
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" data-theme="" data-icon="delete" id="cancel-pic">
+                                Cancelar
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" data-theme="" data-icon="grid" id="active-crop">
+                                Seleccionar Area
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Prueba -->
+        <div id="page6" data-role="page">
+            <div data-role="content">
+                <div class="container">
+                    
+                </div>
+            </div>
+            <div id="pagefooter1" data-id="foo1" data-role="footer" data-theme="a" data-position="fixed">
+                <div id="navbar2" data-role="navbar" data-iconpos="top">
+                    <ul>
+                        <li>
+                            <a href="#page4" data-theme="" data-icon="check">
+                                Confirmar
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#page4" data-theme="" data-icon="delete">
+                                Cancelar
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+    </body>
+
+</html>
